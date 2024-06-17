@@ -8,35 +8,37 @@
 </head>
 <body>
     <main>
-        <div class="bill-input">
-            <p>Bill</p>
-            <div class="input-container">
-                <span>Rs</span>
-                <input placeholder="_" id="bill-amount" type="number">
-            </div>
-            <p>Select Tip</p>
-            <div class="tip-container">
-               <div class="tip">5%</div>
-               <div class="tip">10%</div>
-               <div class="tip">15%</div>
-               <div class="tip">25%</div>
-               <div class="tip">50%</div>
-               <div class="tip">75%</div>
-            </div>
-            <input type="number" class="custom-input gray-input" placeholder="Customer Tip">
-            <p>Number of people</p>
-            <input type="number" class="number-of-people gray-input" placeholder="Number of people">
-            <button class="generate-bill-btn">Generate Bill</button>
+      <div class="bill-input">
+        <p>Bill</p>
+          <div class="input-container">
+              <span>Rs</span>
+            <input placeholder="_" id="bill-amount" type="number">
         </div>
-        <div class="bill-output">
-        <p class="tip-amount">Tips Amount <span></span></p>
-        <p class="total">Total <span></span></p>
-        <p class="each-person-bill">Each Person Bill <span></span></p>    
+        <p>Select Tip</p>
+          <div class="tip-container" disabled>
+            <button type="button" class="tip">5%</button>
+             <button type="button" class="tip">10%</button>
+                <button type="button" class="tip">15%</button>
+                  <button type="button" class="tip">25%</button>
+                <button type="button" class="tip">50%</button>
+              <button type="button" class="tip">75%</button>
+          </div>
+      <input type="number" class="custom-input gray-input" placeholder="Customer Tip" disabled>
+         <p>Number of people</p>
+              <input type="number" 
+                 class="number-of-people gray-input" 
+               placeholder="Number of people" disabled>
+            <button class="generate-bill-btn" disabled>Generate Bill</button>
+        </div>
+      <div class="bill-output">
+           <p class="tip-amount">Tips Amount <span></span></p>
+             <p class="total">Total <span></span></p>
+           <p class="each-person-bill">Each Person Bill <span></span></p>    
         <button class="reset-btn" disabled>Reset</button>
-        </div>
-    </main>
-    <script src="Script.js">
+     </div>
+ </main>
+        <script src="Script.js">
         
-    </script>
+        </script>
 </body>
 </html>
