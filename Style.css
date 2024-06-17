@@ -63,13 +63,21 @@ input[type="number"]::-webkit-inner-spin-button {
     grid-template-columns: 1fr 1fr 1fr;
     gap: 15px;
     color: white;
+    margin-bottom: 12px;
+}
+.tip-container.disabled{
+    pointer-events: none;
+    opacity: 0.6;
 }
 .tip{
     background-color: #9c60ff;
     border-radius: 10px;
     text-align: center;
-   padding: 10px;
-   cursor: pointer;
+    padding: 10px;
+    cursor: pointer;
+    font: inherit;
+    color: inherit;
+    border: none;
 }
 .tip.selected{
     outline: 4px solid rgba(255, 162, 0, 0.888  );
@@ -96,17 +104,21 @@ input[type="number"]::-webkit-inner-spin-button {
     border-radius: 7px;
     margin-top: 15px;
 }
-.bill-output p span{
+.generate-bill-btn:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+}
+.bill-output p span {
     font-size: 25px;
     /* color: #ddcaff; */
     font-weight: 600;
 }
-.bill-output p{
+.bill-output p {
      display: flex;
      align-items: center;
      justify-content: space-between;
 }
-.reset-btn{
+.reset-btn {
     padding: 12px;
     border: none;
     border-radius: 6px;
@@ -114,6 +126,10 @@ input[type="number"]::-webkit-inner-spin-button {
     width: 100%;
     cursor: pointer;
     font-family: inherit;
+}
+
+input:disabled {
+   cursor: not-allowed;
 }
 
 @media(max-width: 550px){
