@@ -7,7 +7,7 @@ const tipAmountOutput = document.querySelector('.tip-amount span');
 const totalBillOutput = document.querySelector('.total span');
 const tipsContainer = document.querySelector('.tip-container');
 let resetBtn = document.querySelector('.reset-btn');
-let tipPercentage;
+let tipPercentage = 0;
 
 generateBillBtn.addEventListener('click' ,()=>{
       const billAmount = parseInt(billAmountInput.value);
@@ -38,13 +38,23 @@ customTipInput.addEventListener(('input') , () =>{
 })
 
 resetBtn.addEventListener(('click') , () => {
-    tipPercentage = undefined;
+    tipPercentage = 0;
     billAmountInput.value = '';
     customTipInput.value = '';
-    numberOfPeopleInput = '';
-    [...tipsContainer.children].forEach((tip)=>tip.classList.remove('selected'));
-    tipAmountOutput.innerHTML = '';
-    totalBillOutput.innerHTML = '';
+    numberOfPeopleInput.value = '';
+    tipAmountOutput.innerText = '';
+    totalBillOutput.innerText = '';
     eachPersonBillOutput.innerText = '';
-    resetBtn.disabled = true;
+    [...tipsContainer.children].forEach((tip)=>
+        tip.classList.remove('selected'));
+    resetBtn.disabled = true
+})
+billAmountInput.addEventListener('input', ()=>{
+      if(billAmountInput.value){
+        customTipInput.disabled = false;
+        numberOfPeopleInput.disabled = false;
+      }else{
+        customTipInput.disabled = true;
+        numberOfPeopleInput.disabled = true;
+      }
 })
